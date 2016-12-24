@@ -1,6 +1,6 @@
 program square;
 var
-	x:longint;
+	x:int64;
 begin
 	read(x);
 	x := x*x;
