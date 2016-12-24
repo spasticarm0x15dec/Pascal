@@ -1,6 +1,6 @@
 program square;
 var
-	x:int64;
+	x:qword;
 begin
 	read(x);
 	x := x*x;
