@@ -1,12 +1,13 @@
 program compound_statement;
 var
 	a,b,t:integer;
-readln:(a,b);
-begin
+begin	
+	read(a,b);
 	if a > b then
 	begin
-	t := a;
-	a := b;
-	b := a
-	end
+		t := a;
+		a := b;
+		b := t
+	end;
+	writeln(a,b)	
 end.
