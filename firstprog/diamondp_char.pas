@@ -156,10 +156,13 @@ begin
 		l := (2 * k - 3) * len;
 		i := i + l;
 		j := i - l + 1;
+
+		{checking counters(correct)}
+		{write('i=',i,'j=',j);}
 	
-	PrintSpaces((n + 1 - k)*len);
-	write(s);
-	if k > 1 then
+		PrintSpaces((n + 1 - k)*len);
+		write(s);
+		if k > 1 then
 		begin
 			write(copy(x, j, l));
 			write(s);
