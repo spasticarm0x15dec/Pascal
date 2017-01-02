@@ -1,6 +1,26 @@
 program Nowogodnii_Hui;
 
 
+{negotiate + half-height(n) calculation)}
+function NegotiateHalfSize:integer;
+
+var
+	h: integer; 
+
+begin
+
+repeat
+	write('РАЗМЕР ТВОЕГО ПРИБОРА!!{НЕБОЛЬШОЕ НЕЧЕТНОЕ ЧИСЛО}:): ');
+	readln(h)
+until (h > 0) and (h mod 2 = 1);
+
+
+NegotiateHalfSize := h div 2
+
+end;
+
+
+
 
 
 {Print spaces}
@@ -111,31 +131,23 @@ end;
 
 			
 var 
-	h, l, k, n, len, i, j: integer; s, t, u, v, x, w, y, z: string;
+	l, k, n, len, i, j: integer; s, t, u, v, x, w, y, z: string;
 begin
 	
-
 	write('ВЫРУГАЙЙСЯ МАТОМ ЗА ВСЮ ХУЙНЮ(ТОЛЬКО НЕ ДЛИННО И АНГЛ. БУКВАМИ): ');
 	readln(s);
-	len := length(s);
-
-
-
-		
-	repeat
 	
-		write('РАЗМЕР ТВОЕГО ПРИБОРА!!{НЕБОЛЬШОЕ НЕЧЕТНОЕ ЧИСЛО}:): ');
-		readln(h)
-	until (h > 0) and (h mod 2 = 1);
 
-	n := h div 2;
-
+	n := NegotiateHalfSize;
+	len := length(s);
+	
 	for k := 1 to n + 1 do 
 		if len mod 2 = 1 then
 			PrintUpperOdd(n, k, s)
 		else
 			PrintUpperEven(n, k, s);
 
+l := ((k - 1)*len*2-len);
 t := '2017! S NOVUM GODOM!! SHASTYA ZDOROVYA I LUBVI VSEM VSEM VSEM VSEM V god shal''nogo Petuha, Chtoby zhizn'' byla';
 u := 'legka,Neprijatnosti gasi, Pust'' god budet na mazi! Vse pregrady odolej, Na problemy huj zabej, Vzjav Fortunu v';
 v := 'oborot, Pust'' pizdatym budet god! S pivom, v druzheskom krugu, Poimej pechal''-tosku, Telok trahaj, veselis'',';
