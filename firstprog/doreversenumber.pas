@@ -8,7 +8,7 @@ begin
 	if n = 0 then
 		DoReverseNumber := m 
 	else
-		DoReverseNumber(n div 10, m * 10 + n mod 10)
+		DoReverseNumber(m * 10 + n mod 10, n div 10);
 end;
 
 
@@ -29,7 +29,7 @@ var
 begin
 	readln(n);
 	n := ReverseNumber(n);
-	writeln(m)
+	writeln(n)
 	end.
 
 
