@@ -25,6 +25,8 @@ begin
 			readln;
 			ReadLongint := false;
 		end;
+			pos := 0;
+			res := 0;
 			res := res * 10 + ord(c) - ord('0');
 			read(c);
 			pos := pos + 1
@@ -38,20 +40,14 @@ begin
 
 var
 	x, y: longint;
-	ok: boolean;
 
 begin
-	repeat
-		write('Please type the first number: ');
-		ok := ReadLongint(x)
-	until ok;
-	repeat
-		write('Please type the second number: ');
-		ok := ReadLongint(y)
-	until ok;
+	while not ReadLongint(x) do
+		;
+	while not ReadLongint(y) do
+		;
 	writeln(x, ' times ', y, ' is ', x * y)
 end.
-	
 
 
 
