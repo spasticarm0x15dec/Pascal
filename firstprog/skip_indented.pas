@@ -10,7 +10,7 @@ begin
 		read(c);
 		if c = #10 then
 			begin
-				if know and print then 
+				if know and print then	
 					writeln;
 					know := false;
 			end
